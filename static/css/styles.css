@@ -3,7 +3,7 @@
 }
 
 .secondary {
-    background-color: #f08a5d;
+    background-color: #ffffee;
 }
 
 .tertiary {
@@ -14,6 +14,80 @@
     background-color: #6a2c70;
 }
 
+.img-responsive {
+    width: 100%;
+    height: auto;
+}
+
+.logo {
+    background-size:cover;
+    background-image: url('/static/images/transparent.png');
+    height:150px;
+    width: 600px;
+    margin: 0px auto;
+}
+
+
+.hero {
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px #b83b5e;
+    margin: 20px;
+}
+@media(max-width: 800px){
+    .content {
+        width: 100%;
+    }
+}
+
+
+@media(min-width: 801px){
+    .content {
+        width: 75%;
+        margin: 0px auto;
+    }
+}
+
+.custom-carousel {
+    background-image: url('/static/images/carousel.png');
+    height: 50vh;
+    background-size: cover;
+    animation: 1s shutter;
+
+}
+
+.about-list {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.cc-container {
+    background-color: black;
+    height:50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.polaroid-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#widget-container {
+    width: 500px;
+}
+
+#about-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/*Animations */
 .polaroid {
     width: 300px;
     height: 350px;
@@ -24,6 +98,9 @@
     box-shadow: 2px 5px 10px #ccc;
     animation: drop 3s;
     transform: rotateZ(12deg);
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 
 .polaroid-content {
@@ -31,6 +108,14 @@
     background-image: url(/static/images/me.jpg);
     background-size:cover;
     height: 280px;
+}
+
+.custom-deck {
+    margin-top: 25px;
+}
+
+.custom-deck .card {
+    box-shadow: 2px 5px 15px #ccc;
 }
 
 @keyframes drop{
@@ -47,7 +132,7 @@
 
 .shutter-carousel {
     width: 100%;
-    height: 300px;
+    min-height: 300px;
     background-color: black;
     display: flex;
     justify-content: center;
@@ -58,10 +143,19 @@
 .shutter-carousel-image {
     width: 100%;
     height: 100%;
-    background-image: url('/static/images/me.jpg');
-    animation: 1s shutter;
+    background-size: cover;
+    
 }
 
+.shutter-animation {
+    animation: 5s shutter infinite;
+    animation-fill-mode: forwards;
+}
+
+.shutter-carousel-image > img {
+    width: 100%;
+    height: auto;
+}
 
 @keyframes shutter {
     0% {
@@ -69,21 +163,28 @@
         height: 100%;
     }
 
-    20% {
+    /* smallest */
+    6% {
         width: 60px;
         height: 60px;
         border-radius: 30px;
     }
 
-    80% {
+    /* up to max-height */
+    9% {
         width: 300px;
         height: 300px;
         border-radius: 150px;
     }
 
-
-    100% {
+    16% {
         width: 100%;
-        height: 100%;
+        border-radius: 0px;
+        height: 300px;
     }
+
+     100% {
+        width: 100%;
+        height: 300px;
+    } 
 }
