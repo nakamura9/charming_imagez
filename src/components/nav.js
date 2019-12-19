@@ -1,20 +1,36 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {Navbar, Nav, } from 'react-bootstrap'
+import { LinkContainer } from 'react-router-bootstrap';
 
 const AppNav = (props) =>{
     return(
-        <nav className="navbar navbar-expand-lg navbar-dark quarternary">
-            <div className="container mx-auto">
-                <ul className="navbar-nav">
-                    <li className='nav-item'><Link className='nav-link' to="/" >Home</Link></li>
-                    <li className='nav-item'><Link to="/about" className='nav-link' >About</Link></li>
-                    <li className='nav-item'><Link to="/packages" className='nav-link' >Packages</Link></li>
-                    <li className='nav-item'><Link to="/gallery" className='nav-link' >Gallery</Link></li>
-                    <li className='nav-item'><Link to="/blog/" className='nav-link' >Blog</Link></li>
-                </ul>
-            </div>
-        </nav>
+        <Navbar expand='lg' >
+            <Navbar.Brand >
+                <Link to='/'>Charming Imagez</Link>
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="mr-auto">
+                <LinkContainer to='/'>
+                    <Nav.Link >Home</Nav.Link>
+                </LinkContainer>
+                <LinkContainer to='/about'>
+                    <Nav.Link >About</Nav.Link>
+                </LinkContainer>
+                <LinkContainer to='/gallery'>
+                    <Nav.Link >Gallery</Nav.Link>
+                </LinkContainer>
+                <LinkContainer to='/packages'>
+                    <Nav.Link >Packages</Nav.Link></LinkContainer>
+                <LinkContainer to='/blog'>
+                    <Nav.Link >Blog</Nav.Link>
+                </LinkContainer>
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
     )
 }
+
 
 export default AppNav;

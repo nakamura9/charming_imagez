@@ -1,7 +1,8 @@
 import React from 'react';
-import Carousel from '../components/carousel'
-import PolaroidWidget from '../components/polaroid'
-// <img src="/static/images/carousel.PNG" alt="" className='img-responsive' />
+import Shutter from '../components/carousel'
+import Carousel from 'react-bootstrap/carousel'
+import TestimonialCard from '../components/testimonials'
+import RevealCard from '../components/reveal_card'
 
 const Home =(props) =>{
 return(
@@ -10,40 +11,49 @@ return(
         <div className='logo'></div>
     </div>
 
-    <Carousel images={["/static/images/carousel.PNG", "/static/images/logo.PNG" ]} />
+    <Shutter images={["/static/images/carousel.PNG", "/static/images/logo.PNG" ]} />
+    
+    <div style={{
+        display:'flex', 
+        flexDirection: 'row', 
+        justifyContent: 'center'
+    }}>
+        <RevealCard 
+            src='/static/images/carousel.PNG'
+            heading='Traditional Things!'
+            text='We can execute your creative vision'
+        />
+        <RevealCard 
+            src='/static/images/carousel.PNG'
+            heading='Traditional Things!'
+            text='We can execute your creative vision'
+        />
+        <RevealCard 
+            src='/static/images/carousel.PNG'
+            heading='Traditional Things!'
+            text='We can execute your creative vision'
+        />
+    </div>
 
-    <div className="polaroid-container shadow">
-        <div id='widget-container'>
-            <PolaroidWidget images={["/static/images/carousel.PNG", "/static/images/me.jpg", "/static/images/logo.png"]} />
-        </div>
-        <div id='about-text'>
-            <h3>Record the whole experience</h3>
-            <p>From first glance to gentle serenade</p>
-        </div>
-    </div>
-    <div className="card-deck custom-deck">
-        <div className="card">
-            <img className="card-img-top" src="/static/images/carousel.PNG" />
-            <div className="card-body">
-                <h4 className="card-title">Wedding Photography</h4>
-                <p className="card-text">Text</p>
-            </div>
-        </div>
-        <div className="card">
-            <img className="card-img-top" src="/static/images/carousel.PNG" />
-            <div className="card-body">
-                <h4 className="card-title">Corporate Events</h4>
-                <p className="card-text">Text</p>
-            </div>
-        </div>
-        <div className="card">
-            <img className="card-img-top" src="/static/images/carousel.PNG" />
-            <div className="card-body">
-                <h4 className="card-title">Special Family Moments</h4>
-                <p className="card-text">Text</p>
-            </div>
-        </div>
-    </div>
+    <h3>Testimonials</h3>
+    <Carousel>
+        <Carousel.Item>
+            <TestimonialCard 
+                img='/static/images/testimonial.PNG'
+                text='Charming Imagez really lives up to the name!'
+                name='Julia'
+                location='Bulawayo'/>
+        </Carousel.Item>
+        <Carousel.Item>
+        <TestimonialCard 
+            img='/static/images/testimonial-2.PNG'
+            text='Family photos never looked this good!'
+            name='Julia'
+            location='Johannesburg'/>
+        </Carousel.Item>
+    </Carousel>
+    
+    
 </React.Fragment>
 
 
