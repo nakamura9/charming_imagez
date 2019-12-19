@@ -16,7 +16,8 @@ return(
     <div style={{
         display:'flex', 
         flexDirection: 'row', 
-        justifyContent: 'center'
+        justifyContent: 'center',
+        flexWrap: 'wrap'
     }}>
         <RevealCard 
             src='/static/images/carousel.PNG'
