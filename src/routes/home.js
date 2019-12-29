@@ -7,17 +7,30 @@ import RevealCard from '../components/reveal_card'
 const Home =(props) =>{
 return(
 <React.Fragment>
-    <div className='hero primary'>
-        <div className='logo'></div>
-    </div>
-
-    <Shutter images={["/static/images/carousel.PNG", "/static/images/logo.PNG" ]} />
     
-    <div style={{
+    <div className="jumbotron-fluid herotron">
+        <div >
+            <img src='/static/images/transparent.PNG' />
+        </div>
+    </div>
+    
+    <div className="jumbotron" style={{
+        color: '#ffffee',
+        background: 'linear-gradient(to right, rgb(106,44,112), rgb(255,255,238))',
+        marginBottom: '0px',
+    }}>
+    <h1 style={{
+        'fontFamily': 'AlexBrush', 
+        fontSize: '5rem', 
+        padding: '0.75rem',
+        fontWeight: '400',
+        
+    }}>Stories</h1>
+    <div  style={{
         display:'flex', 
         flexDirection: 'row', 
         justifyContent: 'center',
-        flexWrap: 'wrap'
+        flexWrap: 'wrap',
     }}>
         <RevealCard 
             src='/static/images/carousel.PNG'
@@ -35,24 +48,46 @@ return(
             text='We can execute your creative vision'
         />
     </div>
-
-    <h3>Testimonials</h3>
-    <Carousel>
+    
+    </div>
+    
+    <div className="jumbotron" style={{
+        color: '#ffffee',
+        background: 'linear-gradient(to left, rgb(184,59,94), rgb(255,255,238))',marginBottomL:'0px'
+    }}>
+        <h1 style={{'fontFamily': 'AlexBrush', fontSize: '5rem', fontWeight: '200', textAlign: 'right'}}>Testimonials</h1>
+        <Carousel>
         <Carousel.Item>
             <TestimonialCard 
-                img='/static/images/testimonial.PNG'
-                text='Charming Imagez really lives up to the name!'
-                name='Julia'
-                location='Bulawayo'/>
+                img='/static/images/rumbi-testimonial.png'
+                text='A charming beginning with potential for massive growth...'
+                name='Rumbidzai'
+                location='Harare'/>
         </Carousel.Item>
         <Carousel.Item>
         <TestimonialCard 
-            img='/static/images/testimonial-2.PNG'
-            text='Family photos never looked this good!'
-            name='Julia'
-            location='Johannesburg'/>
+            img='/static/images/tinsel-testimonial.png'
+            text="I've had shoots before, but this guy really knows his craft.... I would recommend him any day, any place. Absolutely the best in the industry."
+            name='Tinsel'
+            location='Harare'/>
+        </Carousel.Item>
+        <Carousel.Item>
+            <TestimonialCard 
+                img='/static/images/anonymous.jpg'
+                text="Had a photoshoot with Gerald recently, and was very impressed with his professionalism and skill. He is amazing with kids and made the experience enjoyable for the whole family. The photos are amazing and Gerald created everlasting memories for my family."
+                name='Sandy'
+                location='Harare'/>
+        </Carousel.Item>
+        <Carousel.Item>
+            <TestimonialCard 
+                img='/static/images/valery-testimonial.png'
+                text="They focus on the details. They are the very best!"
+                name='Valery'
+                location='Harare'/>
         </Carousel.Item>
     </Carousel>
+</div>
+    
     
     
 </React.Fragment>

@@ -36,7 +36,7 @@ class Carousel extends React.Component{
 
     render(){
         return(
-            <div className='content'>
+            <div>
                 <div className="shutter-carousel">
                     <div className="shutter-carousel-image shutter-animation"
                         style={{

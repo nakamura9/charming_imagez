@@ -2,19 +2,29 @@ import React from 'react';
 
 const About =(props) =>{
     return(
-        <div className='container'>
+        <div className="about__container">
+            <div className='container-fluid'>
             <div className="row">
-                <div className="col-sm-12 col-md-4">
+                <div className="col-md-12 col-lg-3">
                     <div id="about__hero">
-                        
                         
                     </div>
                 </div>
-                <div className="col-sm-12 col-md-8">
-                    Hi, I'm Gerald
+                <div className="col-md-12 col-lg-9">
+                    <div className="about__divider">
+                            <h1 style={{fontFamily: 'AlexBrush'}}>Hi, I'm Gerald</h1>
+                            <hr className="my-2"/>
+                        <p>Photography is art, I paint with light.</p>
+                        <p>If you want to make lasting memories, Charming Imagez is your only choice.</p>
+                        <p>Not only do we treat all your occasions with respect, our passion for photography is captured with each click. Being destination photographers means we are with you wherever you choose to be.</p>
+                        <p>Those moments which encapsulate your journey are the moments that make CIP come alive!</p>
+                    </div>
                 </div>
             </div>
         </div>
+        </div>
+
+        
     )
 }
 

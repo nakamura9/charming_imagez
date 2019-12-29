@@ -33,6 +33,10 @@ module.exports = {
                 query: {
                     presets: ['stage-2','react']//stage 2 for class level attrs and autobind
                 }
+            },
+            {
+                test: /\.(png|woff|woff2|eot|ttf|svg)$/, 
+                loader: 'url-loader?limit=100000'
             }
         ]
     },

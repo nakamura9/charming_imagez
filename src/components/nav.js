@@ -5,9 +5,11 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 const AppNav = (props) =>{
     return(
-        <Navbar expand='lg' >
+        <Navbar expand='lg' className='quarternary navbar-dark' >
             <Navbar.Brand >
-                <Link to='/'>Charming Imagez</Link>
+                <Link to='/'>
+                    <img width='200' height='40' src='/static/images/transparent.PNG' style={{filter:'invert(100%)'}}/>
+                </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
