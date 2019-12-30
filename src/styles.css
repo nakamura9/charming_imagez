@@ -12,5 +12,7 @@
 }
 
 .footer > div {
-    flex: 1
+    flex: 1;
+    min-width: 300px;
+    margin: 2rem;
 }

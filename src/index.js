@@ -5,6 +5,7 @@ import AppNav from './components/nav'
 import Footer from './components/footer'
 import Home from './routes/home'
 import Blog from './routes/blog/list'
+import Post from './routes/blog/post'
 import About from './routes/about'
 import Packages from './routes/packages'
 import Gallery from './routes/gallery'
@@ -20,6 +21,7 @@ class App extends React.Component{
             <Switch>
                 <Route path='/gallery' component={Gallery} />
                 <Route path='/blog/' component={Blog} />
+                <Route path='/post/:id' component={Post} />
                 <Route path='/about' component={About} />
                 <Route path='/packages' component={Packages} />
                 <Route path='/' component={Home} />
