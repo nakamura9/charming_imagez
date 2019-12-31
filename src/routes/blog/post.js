@@ -11,8 +11,8 @@ const Post =(props) =>{
     const [post, setPost] = React.useState(null)
 
     React.useEffect(()=>{
-        client.getEntry(props.match.params).then(res=>{
-            
+        client.getEntry(props.match.params.id).then(res=>{
+            console.log(props.match.params)
             setPost(res)
         })
     }, [])
@@ -20,14 +20,16 @@ const Post =(props) =>{
     return(
         <div className="container">
             <div className="row">
-                <div className="col-12">
+                <div className="col-12 blog__post">
                     {post != null ? <React.Fragment>
                         <h1>{post.fields.title}</h1>
-                        <h5>{post.fields.published}</h5>
+                        <p><i> Published: {new Date(post.fields.published).toDateString()}</i></p>
                         <img src={`${post.fields.headingImage.fields.file.url}`} alt="Blog Post Title"/>
                         <h5>By {post.fields.author.fields.fullName}</h5>
+                        <div className='blog__post-content'>
                         {documentToReactComponents(post.fields.content)}
-                        <p>Tagged under:</p>
+                        </div>
+                        <p> <u> Tagged under:</u></p>
                         <div>
                             {post.fields.tags.map(tag=>(
                                 <span className="blog__tag"># {tag.fields.name}</span>

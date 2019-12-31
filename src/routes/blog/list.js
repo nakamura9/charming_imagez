@@ -17,6 +17,7 @@ const Blog =(props) =>{
     const [authors, setAuthors] = React.useState([])
     
     React.useEffect(()=>{
+        console.log('changing')
         client.getEntries({
             content_type: 'blogPost'
         }).then(res =>{
@@ -28,20 +29,24 @@ const Blog =(props) =>{
             }
             if(currentAuthor != null){
                 posts = posts.filter(post =>{
-                    return(post.fields.author.sys.id == currentAuthor.sys.id)
+                    return(post.fields.author.fields.fullName == currentAuthor.fields.fullName)
                 })
             }
             if(currentTag != null){
                 posts = posts.filter(post =>{
+                    console.log('iterating tags')
+                    let tag;
                     for(tag of post.fields.tags){
-                        if(currentTag.sys.id == tag.sys.id){
+                        console.log(currentTag)
+                        console.log(tag)
+                        if(currentTag.fields.name == tag.fields.name){
                             return true
                         }
                     }
                     return false
                 })
             }
-            
+            setPosts(posts)
         });
         //tags 
         client.getEntries({
@@ -57,6 +62,7 @@ const Blog =(props) =>{
             setAuthors(res.items)
         });
     },[currentAuthor, currentTag])
+
     return(
         <React.Fragment>
         <h1  style={{

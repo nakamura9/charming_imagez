@@ -9,8 +9,9 @@ return(
 <React.Fragment>
     
     <div className="jumbotron-fluid herotron">
+        
         <div >
-            <img src='/static/images/transparent.PNG' />
+            <img src='/static/images/transparent.PNG'  />
         </div>
     </div>
     

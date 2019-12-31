@@ -3,6 +3,11 @@
     font-family: AlexBrush;
 }
 
+@font-face{
+    src:url("/static/fonts/TheanoDidot-Regular.ttf");
+    font-family: Didot;
+}
+
 
 
 .primary {
@@ -50,7 +55,18 @@
     border: 0px;
     background-size: 100%;
     background-repeat: no-repeat;
-    background-image: url(/static/images/collage.jpg)
+}
+
+@media(max-width: 900px){
+    .herotron {
+        background-image: url(/static/images/collage2.jpg);
+    }
+}
+
+@media(min-width: 901px){
+    .herotron {
+        background-image: url(/static/images/collage.jpg);
+    }
 }
 
 
@@ -319,16 +335,20 @@
     overflow: hidden;
 }
 
+.reveal-card:hover .reveal-text{
+    top: 0px;
+}
+
+.reveal-card:hover .reveal-image{
+    filter: blur(2px);
+    transform: scale(1.5);
+}
+
 .reveal-image {
     height: 300px;
     width: 100%;
     background-size: cover;
     transition: filter .3s linear, transform .3s linear;
-}
-
-.reveal-image-hover {
-    filter: blur(2px);
-    transform: scale(1.5);
 }
 
 .reveal-text{
@@ -346,10 +366,6 @@
 .text-heading {
     text-align: center;
     font-weight: 700;
-}
-
-.reveal-text-hover {
-    top: 0px;
 }
 
 .footer__link {
@@ -443,4 +459,27 @@
 .blog__b:hover {
     color: #ffffee;
     background-color: #b83b5e;
+}
+
+.blog__post h1 {
+    font-family: Didot, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 200;
+}
+
+.blog__post h5 {
+    font-family: Helvetica, Arial,  sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.blog__post img {
+    width: 100%;
+    height: auto;
+}
+
+.blog__post-content {
+    font-size: 1.5rem;
+    color: #555
 }
