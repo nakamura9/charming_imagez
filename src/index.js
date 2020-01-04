@@ -1,6 +1,6 @@
-import React from 'react'
+import React, {lazy, Suspense} from 'react'
 import ReactDOM from 'react-dom'
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {HashRouter as Router, Switch, Route} from 'react-router-dom'
 import AppNav from './components/nav'
 import Footer from './components/footer'
 import Home from './routes/home'
@@ -8,15 +8,15 @@ import About from './routes/about'
 import Packages from './routes/packages'
 import {createBrowserHistory} from 'history'
 
-const Gallery = React.lazy(() => import('./routes/gallery'))
-const Blog = React.lazy(() => import('./routes/blog/list'))
-const Post = React.lazy(() => import('./routes/blog/post'))
+import Gallery from'./routes/gallery'
+import Post from './routes/blog/post'
+import Blog from './routes/blog/list'
 
 const LazyComponent = (Component) =>{
     return props => (
-        <React.Suspense fallback={<div>Loading...</div>} >
+        <Suspense fallback={<div>Loading...</div>} >
             <Component {...props} />
-        </React.Suspense>
+        </Suspense>
     )
 }
 const browserHistory = createBrowserHistory()
@@ -26,8 +26,8 @@ class App extends React.Component{
         return(<Router>
             <AppNav />
             <Switch>
-                <Route path='/gallery' component={LazyComponent(Gallery)} />
-                <Route path='/blog/' component={LazyComponent(Blog)} />
+                <Route path='/gallery' component={Gallery} />
+                <Route path='/blog/' component={Blog} />
                 <Route path='/post/:id' component={Post} />
                 <Route path='/about' component={About} />
                 <Route path='/packages' component={Packages} />

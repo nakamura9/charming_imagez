@@ -2,8 +2,8 @@ import React from 'react'
 import style from '../styles.css'
 const Footer = (props) =>{
     return(<footer className={style.footer}>
-            <div>Made with love by <b>Umisoft</b>
-                <p><i class="fa fa-copyright" aria-hidden="true"></i> 2019</p>
+            <div>
+                <p>Made with love by <b>Umisoft</b><i class="fa fa-copyright" aria-hidden="true"></i> 2019</p>
             </div>
             <div>
             <h5>Links</h5>
