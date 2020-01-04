@@ -66,7 +66,8 @@ const Gallary =(props) =>{
     };
     return(
         <React.Fragment>
-            <div className="container-fluid">
+            
+        <div className="container-fluid">
             {/*<div className="row">
                 <div className="col-lg-6 col-md-12 polaroid-container">
                     <PolaroidWidget images={[
@@ -83,6 +84,7 @@ const Gallary =(props) =>{
             </div>*/}
             <div className="row">
                 <div className="col-12">
+                    <h1 style={{fontFamily: 'AlexBrush', fontWeight: 500, fontSize: '5rem', textAlign: 'center'}}>Photo Gallery</h1>
                     <PhotoGallery photos={photos} onClick={openLightbox}/>
                 </div>
             </div>

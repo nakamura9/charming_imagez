@@ -16,8 +16,8 @@ return(
     </div>
     
     <div className="jumbotron" style={{
-        color: '#ffffee',
-        background: 'linear-gradient(to right, rgb(106,44,112), rgb(255,255,238))',
+        color: '#444',
+        background: 'linear-gradient(to right, rgb(201, 214, 223), rgb(240, 245, 249))',
         marginBottom: '0px',
     }}>
     <h1 style={{
@@ -52,8 +52,8 @@ return(
     
     </div>
     <div className="jumbotron " style={{
-        color: '#ffffee',
-        background: 'linear-gradient(to left, rgb(184,59,94), rgb(255,255,238))',marginBottomL:'0px'
+        color: '#444',
+        background: 'linear-gradient(to left, rgb(201, 214, 223), rgb(240, 245, 249))',marginBottomL:'0px'
     }}>
         <h1 style={{'fontFamily': 'AlexBrush', fontSize: '5rem', fontWeight: '200', textAlign: 'right'}}>Testimonials</h1>
         
