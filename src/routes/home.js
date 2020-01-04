@@ -34,20 +34,21 @@ return(
         flexWrap: 'wrap',
     }}>
         <RevealCard 
-            src='/static/images/carousel.PNG'
-            heading='Traditional Things!'
+            src='/static/images/stories/family.jpg'
+            heading="Team family!"
+            text="We're all number 1!"
+        />
+        <RevealCard 
+            src='/static/images/stories/beach.jpg'
+            heading='Wherever you are'
             text='We can execute your creative vision'
         />
         <RevealCard 
-            src='/static/images/proposal.PNG'
-            heading="Will She? Won't she?!"
-            text='Capture the heart-pounding moments before a life changing decision.'
+            src='/static/images/stories/cresta.jpg'
+            heading="Perfect Symmetry!"
+            text='The scene was perfect, the bridal party, even more so.'
         />
-        <RevealCard 
-            src='/static/images/pregnant.PNG'
-            heading="There's a bun in the oven!"
-            text='As your family begins to grow...'
-        />
+        
     </div>
     
     </div>
@@ -59,12 +60,12 @@ return(
         
         <div className='testimonial__container-flex'>
         <TestimonialCard 
-            img='/static/images/rumbi-testimonial.png'
+            img='/static/images/rumbi-testimonial.jpg'
             text='A charming beginning with potential for massive growth...'
             name='Rumbidzai'
             location='Harare'/>
         <TestimonialCard 
-            img='/static/images/tinsel-testimonial.png'
+            img='/static/images/tinsel-testimonial.jpg'
             text="I've had shoots before, but this guy really knows his craft.... I would recommend him any day, any place. Absolutely the best in the industry."
             name='Tinsel'
             location='Harare'/>
@@ -74,7 +75,7 @@ return(
             name='Sandy'
             location='Harare'/>
         <TestimonialCard 
-            img='/static/images/valery-testimonial.png'
+            img='/static/images/valery-testimonial.jpg'
             text="They focus on the details. They are the very best!"
             name='Valery'
             location='Harare'/>
@@ -84,14 +85,14 @@ return(
         <Carousel className='testimonial__container-carousel'>
         <Carousel.Item>
             <TestimonialCard 
-                img='/static/images/rumbi-testimonial.png'
+                img='/static/images/rumbi-testimonial.jpg'
                 text='A charming beginning with potential for massive growth...'
                 name='Rumbidzai'
                 location='Harare'/>
         </Carousel.Item>
         <Carousel.Item>
         <TestimonialCard 
-            img='/static/images/tinsel-testimonial.png'
+            img='/static/images/tinsel-testimonial.jpg'
             text="I've had shoots before, but this guy really knows his craft.... I would recommend him any day, any place. Absolutely the best in the industry."
             name='Tinsel'
             location='Harare'/>
@@ -101,11 +102,11 @@ return(
                 img='/static/images/anonymous.jpg'
                 text="Had a photoshoot with Gerald recently, and was very impressed with his professionalism and skill. He is amazing with kids and made the experience enjoyable for the whole family. The photos are amazing and Gerald created everlasting memories for my family."
                 name='Sandy'
-                location='Harare'/>
+                location='Australia'/>
         </Carousel.Item>
         <Carousel.Item>
             <TestimonialCard 
-                img='/static/images/valery-testimonial.png'
+                img='/static/images/valery-testimonial.jpg'
                 text="They focus on the details. They are the very best!"
                 name='Valery'
                 location='Harare'/>

@@ -1,108 +1,146 @@
-import React, {useState, useCallback} from 'react'
-import PolaroidWidget from '../components/polaroid'
-import PhotoGallery from 'react-photo-gallery'
-import Carousel, { Modal, ModalGateway } from "react-images"
-
+import React from 'react'
+import PhotoGallery from 'react-grid-gallery'
 const photos = [
     {
-        src: "/static/images/mombe.PNG",
-        width: 1,
-        height: 1
+        thumbnail: "/static/images/thumbs/arch.jpg",
+        src: "/static/images/arch.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 213
     },
     {
-        src: "/static/images/stairs.PNG",
-        width: 1,
-        height: 1
+        src: "/static/images/baby.jpg",
+        thumbnail: "/static/images/thumbs/baby.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 320
     },
     {
-        src: "/static/images/car.PNG",
-        width: 1,
-        height: 1
+        src: "/static/images/baker.jpg",
+        thumbnail: "/static/images/thumbs/baker.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 213
     },
     {
-        src: "/static/images/proposal.PNG",
-        width: 1,
-        height: 1
+        src: "/static/images/beach.jpg",
+        thumbnail: "/static/images/thumbs/beach.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 214
     },
     {
-        src: "/static/images/pregnant.PNG",
-        width: 1,
-        height: 1
+        src: "/static/images/benz.jpg",
+        thumbnail: "/static/images/thumbs/benz.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 213
     },
     {
-        src: "/static/images/carousel.PNG",
-        width: 1.5,
-        height: 1
+        src: "/static/images/cake.jpg",
+        thumbnail: "/static/images/thumbs/cake.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 256
     },
     {
-        src: "/static/images/rapids.PNG",
-        width: 2,
-        height: 1
+        src: "/static/images/cresta.jpg",
+        thumbnail: "/static/images/thumbs/cresta.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 213
     },
     {
-        src: "/static/images/tsvimbo.PNG",
-        width: 1,
-        height: 2
+        src: "/static/images/cresta-2.jpg",
+        thumbnail: "/static/images/thumbs/cresta-2.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 214
     },
     {
-        src: "/static/images/cuddle.PNG",
-        width: 1,
-        height: 1
-    }
+        src: "/static/images/family.jpg",
+        thumbnail: "/static/images/thumbs/family.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 213
+    },
+    {
+        src: "/static/images/family-chair.jpg",
+        thumbnail: "/static/images/thumbs/family-chair.jpg",
+        thumbnailWidth: 240,
+        thumbnailHeight: 360
+    },
+    {
+        src: "/static/images/family-half.jpg",
+        thumbnail: "/static/images/thumbs/family-half.jpg",
+        thumbnailWidth: 240,
+        thumbnailHeight: 300
+    },
+    {
+        src: "/static/images/family-kids.jpg",
+        thumbnail: "/static/images/thumbs/family-kids.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 213
+    },
+    {
+        src: "/static/images/family-left.jpg",
+        thumbnail: "/static/images/thumbs/family-left.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 213
+    },
+    {
+        src: "/static/images/family-three.jpg",
+        thumbnail: "/static/images/thumbs/family-three.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 213
+    },
+    {
+        src: "/static/images/friend.jpg",
+        thumbnail: "/static/images/thumbs/friend.jpg",
+        thumbnailWidth: 240,
+        thumbnailHeight: 300
+    },
+    {
+        src: "/static/images/girls.jpg",
+        thumbnail: "/static/images/thumbs/girl-toys.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 213
+    },
+    {
+        src: "/static/images/graduation.jpg",
+        thumbnail: "/static/images/thumbs/graduation.jpg",
+        thumbnailWidth: 240,
+        thumbnailHeight: 336
+    },
+    {
+        src: "/static/images/in-car.jpg",
+        thumbnail: "/static/images/thumbs/in-car.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 213
+    },
+    {
+        src: "/static/images/infant.jpg",
+        thumbnail: "/static/images/thumbs/infant.jpg",
+        thumbnailWidth: 240,
+        thumbnailHeight: 360
+    },
+    {
+        src: "/static/images/rings.jpg",
+        thumbnail: "/static/images/thumbs/rings.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 214
+    },
+    {
+        src: "/static/images/toys.jpg",
+        thumbnail: "/static/images/thumbs/toys.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 320
+    },
 ]
 
 const Gallary =(props) =>{
-    const [currentImage, setCurrentImage] = useState(0)
-    const [viewerIsOpen, setViewerIsOpen] = useState(false)
-
-    const openLightbox = useCallback((event, { photo, index }) => {
-        setCurrentImage(index);
-        setViewerIsOpen(true);
-    }, [])
-
-    const closeLightbox = () => {
-        setCurrentImage(0);
-        setViewerIsOpen(false);
-    };
     return(
         <React.Fragment>
             
         <div className="container-fluid">
-            {/*<div className="row">
-                <div className="col-lg-6 col-md-12 polaroid-container">
-                    <PolaroidWidget images={[
-                        "/static/images/carousel.PNG", 
-                        "/static/images/me.jpg", 
-                        "/static/images/logo.png"]} />
-                </div>
-                <div className="col-lg-6 col-md-12">
-                    <div id='about-text'>
-                        <h3>Record the whole experience</h3>
-                        <p>From first glance to gentle serenade</p>
-                    </div>
-                </div>
-            </div>*/}
             <div className="row">
                 <div className="col-12">
                     <h1 style={{fontFamily: 'AlexBrush', fontWeight: 500, fontSize: '5rem', textAlign: 'center'}}>Photo Gallery</h1>
-                    <PhotoGallery photos={photos} onClick={openLightbox}/>
+                    <PhotoGallery images={photos}/>
                 </div>
             </div>
         </div>
-        <ModalGateway>
-            {viewerIsOpen ? (
-                <Modal onClose={closeLightbox}>
-                <Carousel
-                    currentIndex={currentImage}
-                    views={photos.map(x => ({
-                    ...x,
-                    srcset: x.srcSet,
-                    caption: x.title
-                    }))}
-                />
-                </Modal>
-            ) : null}
-        </ModalGateway>
         </React.Fragment>
     )
 }

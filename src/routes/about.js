@@ -1,6 +1,11 @@
 import React from 'react';
 
 const About =(props) =>{
+    const [visible, setVisible] = React.useState(false)
+    React.useEffect(()=>{
+        setTimeout(()=> setVisible(true), 2000)
+    }, [])
+
     return(
         <div className="about__container">
             <div className='container-fluid'>
@@ -12,7 +17,11 @@ const About =(props) =>{
                 </div>
                 <div className="col-md-12 col-lg-9">
                     <div className="about__divider">
-                            <h1 style={{fontFamily: 'AlexBrush'}}>Hi, I'm Gerald</h1>
+                        <div style={{
+                                opacity: visible ? 1 : 0
+                                }}  className='typewriter'>
+                            <h1 >Hi, I'm Gerald</h1>
+                        </div>
                             <hr className="my-2"/>
                         <p>Photography is art, I paint with light.</p>
                         <p>If you want to make lasting memories, Charming Imagez is your only choice.</p>

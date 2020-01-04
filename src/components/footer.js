@@ -8,8 +8,8 @@ const Footer = (props) =>{
             <div>
             <h5>Links</h5>
                 <a className='footer__link' href='/#/about/'> <i class="fas fa-info-circle fa-2x"></i> About</a>
-                <a className='footer__link' href='https://be.contentful.com/login'> <i className="fas fa-blog fa-2x"></i> Blog</a>
-                <a className='footer__link' href='#'><i className="fa fa-user fa-2x"></i> Admin</a>
+                <a className='footer__link' href='/#/blog/'> <i className="fas fa-blog fa-2x"></i> Blog</a>
+                <a className='footer__link' href='https://be.contentful.com/login'><i className="fa fa-user fa-2x"></i> Admin</a>
 
             </div>
             <div>

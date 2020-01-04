@@ -49,8 +49,23 @@
 
 .packages__shadow {
     box-shadow: 2px 5px 25px var(--tertiary);
-    margin: 30px;
+    margin: 50px;
+    padding: 20px;
     min-width: 300px;
+    border-radius: 20px;
+    background-color: white;
+    text-align: center;
+    transition: transform .5s ease-out ;
+}
+
+.packages__shadow:hover{
+    position: relative;
+    z-index: 1;
+    transform: scale(1.125);
+}
+
+.packages__shadow h5 {
+    margin: 1.5rem;
 }
 
 
@@ -82,6 +97,12 @@
     width: 100%;
     height: 100%;
     position: relative;
+    animation: herotron-fade 1s ease-in  1;
+}
+
+@keyframes herotron-fade{
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 
@@ -91,7 +112,19 @@
     position: absolute;
     bottom: 10px;
     left: 25%;
-    filter: invert(100%)
+    filter: invert(100%);
+    animation: logo-animation 1.5s ease-out 1;
+}
+
+@keyframes logo-animation{
+    from{
+        opacity: 0;
+        bottom: -100px;
+    }
+    to{
+        opacity: 1;
+        bottom: 10px;
+    }
 }
 .custom-deck {
     margin-top: 25px;
@@ -110,6 +143,41 @@
     background-image: url(/static/images/gerald.PNG);
     background-size: cover;
     margin: 15vh auto;
+    animation: roll-in 1.5s linear 1;
+    position: relative;
+}
+
+@keyframes roll-in{
+    0%{
+        opacity: 0.1;
+        left: -300px;
+        transform: rotateZ(-180deg);
+    }
+    100%{
+        opacity: 1;
+        left: 0px;
+    }
+}
+
+.typewriter h1{
+    overflow: hidden;
+    border-right: 4px solid #333;
+    white-space: nowrap;
+    margin: 0 auto;
+    max-width: 23rem;
+    animation: 
+        typing 5s steps(40, end) 2s,
+        blink-caret 0.75s step-end infinite 2s;
+}
+
+@keyframes typing {
+    from { width: 0}
+    to { width: 100%;}
+}
+
+@keyframes blink-caret {
+    from, to{ border-color: transparent}
+    50% {border-color: #333;}
 }
 
 .testimonial-card {
@@ -399,10 +467,17 @@
 
 .blog__post-card {
     padding: 20px;
-    margin-bottom: 20px;
+    margin: 20px 30px;
     box-shadow: 0px 2px 4px #ccc;
     display: flex;
     flex-direction: row;
+    background-color:white;
+}
+
+.blog__post-card:hover{
+    position: relative;
+    z-index: 1;
+    transform: scale(1.125);
 }
 
 .blog__post-card img{
@@ -490,3 +565,6 @@
     font-size: 1.5rem;
     color: #555
 }
+
+
+

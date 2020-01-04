@@ -11,7 +11,6 @@ return(
                 <h1 style={{marginBottom: '1rem', marginTop: '1rem',fontFamily: 'AlexBrush',  fontSize: '5rem'}}>Wedding Photography</h1>
                 <CardDeck>
     <Card className='packages__shadow'>
-        <Card.Img variant='top' src='/static/images/mombe.PNG'  />
 
         <Card.Body>
 
@@ -29,10 +28,9 @@ return(
         </Card.Body>
     </Card>
     <Card className='packages__shadow'>
-        <Card.Img variant='top' src='/static/images/stairs.PNG' />
 
         <Card.Body>
-            <Card.Title>Gold Trim</Card.Title>
+            <Card.Title>Gold Tier</Card.Title>
             <ListGroup>
                 <ListGroup.Item>Bride and Groom(2 Photographers)</ListGroup.Item>
                 <ListGroup.Item>500 Photos on flash disk</ListGroup.Item>
@@ -52,10 +50,9 @@ return(
         </Card.Body>
     </Card>
     <Card className='packages__shadow'>
-        <Card.Img variant='top' src='/static/images/car.PNG' />
 
         <Card.Body>
-            <Card.Title>Platinum Platter</Card.Title>
+            <Card.Title>Platinum Tier</Card.Title>
             <ListGroup>
                 <ListGroup.Item>Bride And Groom(2 Photographers)</ListGroup.Item>
                 <ListGroup.Item>500 Photos on flash disk</ListGroup.Item>
@@ -83,7 +80,6 @@ return(
                 <p>Depending on the package selected, some features may be omitted. To customize your experience, you may request the following add-ons.</p>
                 <CardDeck>
                     <Card className='packages__shadow'>
-                        <Card.Img varient='top' src='/static/images/photo-book.jpg'/>
                         <Card.Body>
                             <Card.Title>Photo Books</Card.Title>
                             <Card.Text>Photo books are glossy hardcover books that display your precious moment in a perfect medium for sharing with friends and family.</Card.Text>
@@ -94,7 +90,6 @@ return(
                         </Card.Body>
                     </Card>
                     <Card className='packages__shadow'>
-                        <Card.Img varient='top' src='/static/images/Wedding-Canvas-Print.jpg'/>
                         <Card.Body>
                             <Card.Title>Canvas Portraits</Card.Title>
                             <Card.Text>Canvas Portraits utilize the textured surface of canvas to elevate your pictures to a higher artform. Frame them and hang them on your walls to celebrate your finest moments!</Card.Text>
@@ -106,7 +101,6 @@ return(
                         </Card.Body>
                     </Card>
                     <Card className='packages__shadow'>
-                        <Card.Img varient='top' src='/static/images/drone.PNG'/>
                         <Card.Body>
                             <Card.Title>Drone Footage</Card.Title>
                             <Card.Text>Experience your most precious moments from a whole new persepective. Professionally shot and pilotted drone footage.</Card.Text>
