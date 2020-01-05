@@ -60,20 +60,20 @@ return(
         
         <div className='testimonial__container-flex'>
         <TestimonialCard 
-            img='/static/images/rumbi-testimonial.jpg'
-            text='A charming beginning with potential for massive growth...'
-            name='Rumbidzai'
-            location='Harare'/>
+            img='/static/images/mandlakazi-testimonial.jpg'
+            text="We can't resist your work Gerrie.. To be honest it's s marvelous.. Thina sibonga wena yaz.. 🙏🙏👏👏May God continue to bless the work of your hands"
+            name='Mandlakazi'
+            location='South Africa'/>
         <TestimonialCard 
             img='/static/images/tinsel-testimonial.jpg'
             text="I've had shoots before, but this guy really knows his craft.... I would recommend him any day, any place. Absolutely the best in the industry."
             name='Tinsel'
             location='Harare'/>
         <TestimonialCard 
-            img='/static/images/anonymous.jpg'
+            img='/static/images/sandy-testimonial.jpeg'
             text="Had a photoshoot with Gerald recently, and was very impressed with his professionalism and skill. He is amazing with kids and made the experience enjoyable for the whole family. The photos are amazing and Gerald created everlasting memories for my family."
             name='Sandy'
-            location='Harare'/>
+            location='Australia'/>
         <TestimonialCard 
             img='/static/images/valery-testimonial.jpg'
             text="They focus on the details. They are the very best!"

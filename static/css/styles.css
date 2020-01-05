@@ -47,15 +47,29 @@
     margin: 0px auto;
 }
 
+.packages__deck {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
 .packages__shadow {
     box-shadow: 2px 5px 25px var(--tertiary);
-    margin: 50px;
     padding: 20px;
-    min-width: 300px;
+    margin: 25px;
+    width: 400px ;
     border-radius: 20px;
     background-color: white;
     text-align: center;
     transition: transform .5s ease-out ;
+}
+
+@media(max-width: 450px){
+    .packages__shadow {
+        width: 300px;
+    }
 }
 
 .packages__shadow:hover{
@@ -114,6 +128,13 @@
     left: 25%;
     filter: invert(100%);
     animation: logo-animation 1.5s ease-out 1;
+}
+
+@media(max-width: 900px){
+    .herotron img{
+        width: 100%;
+        left: 0;
+    }
 }
 
 @keyframes logo-animation{
@@ -221,7 +242,9 @@
         box-shadow: 2px 3px 15px var(--tertiary);
         border-radius: 25px;
         height: 100%;
-        background-color: white;
+        background-color: white;    
+        display: flex;
+        align-items: center;
     }
 }
 
