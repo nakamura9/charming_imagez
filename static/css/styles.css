@@ -161,7 +161,7 @@
     width: 300px;
     height: 300px;
     border-radius: 150px;
-    background-image: url(/static/images/gerald.PNG);
+    background-image: url(/static/images/gerald.jpg);
     background-size: cover;
     margin: 15vh auto;
     animation: roll-in 1.5s linear 1;
@@ -591,3 +591,29 @@
 
 
 
+
+
+@media(min-width: 751px){
+.custom-nav img {
+    width: 600px;
+    height: 120px;
+}
+
+.custom-nav {
+    height: 150px !important;
+    font-size: 1.5rem;
+}
+
+}
+
+@media(max-width: 750px){
+    .custom-nav img {
+        width: 300px;
+        height: 60px;
+    }
+
+    .custom-nav{
+        height: 100px !important
+        ;
+    }
+}

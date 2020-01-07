@@ -10,9 +10,9 @@ return(
     
     <div className="jumbotron-fluid herotron">
         
-        <div >
+        {/* <div >
             <img src='/static/images/transparent.PNG'  />
-        </div>
+        </div> */}
     </div>
     
     <div className="jumbotron" style={{

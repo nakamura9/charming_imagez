@@ -1,5 +1,5 @@
 import React from 'react'
-import style from '../styles.css'
+import style from './styles.css'
 const Footer = (props) =>{
     return(<footer className={style.footer}>
             <div>
@@ -13,7 +13,7 @@ const Footer = (props) =>{
 
             </div>
             <div>
-            <h5>Social</h5>
+            <h5>Social Media</h5>
                 <a className='footer__link' href='https://facebook.com/CharmingImagez
                 '><i className="fab fa-facebook fa-2x" ></i> Facebook</a>
                 <a className='footer__link' href=' https://www.instagram.com/charming_imagez'><i className="fab fa-instagram fa-2x" ></i> Instagram</a>
