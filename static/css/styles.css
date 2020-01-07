@@ -613,8 +613,7 @@
     }
 
     .custom-nav{
-        height: 100px !important
-        ;
+        min-height: 100px;
     }
 }
 
