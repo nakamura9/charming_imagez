@@ -22,12 +22,12 @@ class Carousel extends React.Component{
         if(this.state.current < this.props.images.length -1){
             this.setState((prevState) =>({current: prevState.current + 1}), () =>{
                 
-                setTimeout(this.rotateCarousel, 5000)
+                setTimeout(this.rotateCarousel, 7500)
             })
         }else{
             this.setState({current: 0}, ()=>{
                 
-                setTimeout(this.rotateCarousel, 5000)
+                setTimeout(this.rotateCarousel, 7500)
             })
         }
         
@@ -38,11 +38,13 @@ class Carousel extends React.Component{
         return(
             <div>
                 <div className="shutter-carousel">
-                    <div className="shutter-carousel-image shutter-animation"
-                        style={{
-                            backgroundImage: 'url(' + this.props.images[this.state.current] +')'
-                        }}
-                        ref={this.animatable}>
+                    <div className="shutter-carousel-image">
+                            {this.props.images.map((image, i) =>(
+                                <img src={image} style={{
+                                    display: i==this.state.current ? 'block' : 'none',
+                                    zIndex: i
+                                }}/>
+                            ))}
                     </div>
                 </div>
                 

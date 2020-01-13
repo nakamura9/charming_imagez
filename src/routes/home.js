@@ -8,12 +8,18 @@ const Home =(props) =>{
 return(
 <React.Fragment>
     
-    <div className="jumbotron-fluid herotron">
+    {/* <div className="jumbotron-fluid herotron">
         
-        {/* <div >
+     <div >
             <img src='/static/images/transparent.PNG'  />
-        </div> */}
-    </div>
+        </div>
+    </div> */}
+    <Shutter images={[
+        '/static/images/benz.jpg',
+        '/static/images/cresta-2.jpg',
+        '/static/images/arch.jpg',
+        '/static/images/rings.jpg',
+    ]}/>
     
     <div className="jumbotron" style={{
         color: '#444',

@@ -12,7 +12,6 @@ const Post =(props) =>{
 
     React.useEffect(()=>{
         client.getEntry(props.match.params.id).then(res=>{
-            console.log(props.match.params)
             setPost(res)
         })
     }, [])
@@ -25,10 +24,14 @@ const Post =(props) =>{
                         <h1>{post.fields.title}</h1>
                         <p><i> Published: {new Date(post.fields.published).toDateString()}</i></p>
                         <img src={`${post.fields.headingImage.fields.file.url}`} alt="Blog Post Title"/>
+                        <br/>
                         <h5>By {post.fields.author.fields.fullName}</h5>
+                        <hr className='my-2' />
+                        
                         <div className='blog__post-content'>
                         {documentToReactComponents(post.fields.content)}
                         </div>
+                        <hr className='my-2' />
                         <p> <u> Tagged under:</u></p>
                         <div>
                             {post.fields.tags.map(tag=>(

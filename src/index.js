@@ -38,9 +38,7 @@ class App extends React.Component{
                     <Route path='/blog/' >
                         <Blog />
                     </Route>
-                    <Route path='/post/:id'>
-                        <Post />
-                    </Route>
+                    <Route path='/post/:id' component={Post}/>
                     
                     <Route path='/about' component={About} />
                     <Route path='/packages' component={Packages} />
