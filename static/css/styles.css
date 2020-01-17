@@ -11,7 +11,7 @@
 :root{
     --primary: #f0f5f9;
     --secondary: #c9d6df;
-    --tertiary: #52616b;
+    --tertiary: #091116;
     --quarternary:  #1e2022;
 }
 }
@@ -185,7 +185,6 @@
     border-right: 4px solid #333;
     white-space: nowrap;
     margin: 0 auto;
-    max-width: 23rem;
     animation: 
         typing 5s steps(40, end) 2s,
         blink-caret 0.75s step-end infinite 2s;
@@ -330,9 +329,30 @@
 }
 
 .about__divider h1 {
-    font-size: 4rem;
     font-weight: 200;
 }
+
+@media(max-width: 400px){
+    .about__divider h1{
+        font-size: 1.5rem;
+    }
+
+    .typewriter h1{
+        max-width: 300px;
+    }
+}
+
+@media(min-width: 401px){
+    .about__divider h1{
+        font-size: 4rem;
+    }
+    .typewriter h1{
+        max-width: 23rem;
+    }
+}
+
+
+
 /*Animations */
 .polaroid {
     width: 300px;
@@ -371,54 +391,69 @@
 
 .shutter-carousel {
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 150px);
     background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0;
+    position: relative;
     overflow: hidden;
-
 }
 
 .shutter-carousel-image {
-    width:fit-content;
-    height: 100%;
-    animation: 7s shutter infinite;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+}
+
+.shutter-carousel-image img{
+    width: auto;
+    height: calc(100vh - 150px);
+    display: inline-block;
+    margin: 0px auto;
+}
+
+.shutter-animation {
+    animation: 5s shutter infinite;
     animation-fill-mode: forwards;
     background-color: red;
     overflow: hidden;
 }
 
 
-.shutter-carousel-image > img {
-    width: auto;
-    height: 100vh;
-}
-
 @keyframes shutter {
     0% {
-        width: 100%;
-        height: 100%;
+        width: calc(100vh - 150px);
+        height: calc(100vh - 150px);
+        border-radius: calc(50vh - 75px);
     }
 
-    /* smallest */
-    100% {
+    /* smallest 6*/
+    5% {
         width: 60px;
         height: 60px;
         border-radius: 30px;
     }
 
     /* up to max-height */
-    /* 9% {
-        width: 300px !important;
-        height: 300px;
-        border-radius: 150px;
+    25% {
+        width: calc(100vh - 150px);
+        height: calc(100vh - 150px);
+        border-radius: calc(50vh - 75px);
     }
 
-    16%{
-        width: fit-content;
+
+    40% {
+        width: 100vw;
         border-radius: 0px;
-        height: 100vh;
+        height: 100%;
+    }
+
+    100% {
+        transform: scale(1.5)
     }
     100%{
         transform: scale(1.25);
@@ -590,9 +625,6 @@
     font-size: 1.5rem;
     color: #555
 }
-
-
-
 
 
 @media(min-width: 751px){

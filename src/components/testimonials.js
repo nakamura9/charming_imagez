@@ -13,7 +13,10 @@ const TestimonialCard =(props) =>{
                     <p style={{textAlign:'right'}}><i>{props.name}</i>, <b>{props.location}</b> </p>
                 </div>
             </div>
-            <div className='testimonial-card__image' style={{
+            <div className='testimonial-card__image' 
+                 data-aos="flip-left"
+                 data-aos-duration="1500"
+                 style={{
                 backgroundImage: 'url(' + props.img + ')',
                
             }}></div>

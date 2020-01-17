@@ -38,13 +38,12 @@ class Carousel extends React.Component{
         return(
             <div>
                 <div className="shutter-carousel">
-                    <div className="shutter-carousel-image">
-                            {this.props.images.map((image, i) =>(
-                                <img src={image} style={{
-                                    display: i==this.state.current ? 'block' : 'none',
-                                    zIndex: i
-                                }}/>
-                            ))}
+                    <div className="shutter-carousel-image shutter-animation">
+                    {this.props.images.map((img, i) =>(
+                        <img key={i} src={img} 
+                            style={{display: this.state.current == i ?'block'
+                                                : 'none'}}
+                                                />))} 
                     </div>
                 </div>
                 
@@ -52,5 +51,10 @@ class Carousel extends React.Component{
         )
     }
 }
+// {this.props.images.map((img, i) =>(
+//     <img src={img} 
+//          className='shutter-carousel-image'
+//          />
+//     ))}
 // {React.Children.toArray(this.props.children)[this.state.current]}
 export default Carousel

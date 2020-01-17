@@ -8,18 +8,12 @@ const Home =(props) =>{
 return(
 <React.Fragment>
     
-    {/* <div className="jumbotron-fluid herotron">
-        
-     <div >
-            <img src='/static/images/transparent.PNG'  />
-        </div>
-    </div> */}
-    <Shutter images={[
-        '/static/images/benz.jpg',
-        '/static/images/cresta-2.jpg',
-        '/static/images/arch.jpg',
-        '/static/images/rings.jpg',
-    ]}/>
+    <Shutter 
+        images={[
+            '/static/images/arch.jpg',
+            '/static/images/cresta-2.jpg',
+            '/static/images/benz.jpg',
+        ]}/>
     
     <div className="jumbotron" style={{
         color: '#444',
@@ -43,13 +37,16 @@ return(
             src='/static/images/stories/family.jpg'
             heading="Team family!"
             text="We're all number 1!"
+            delay={0}
         />
         <RevealCard 
+            delay={500}
             src='/static/images/stories/beach.jpg'
             heading='Wherever you are'
             text='We can execute your creative vision'
         />
         <RevealCard 
+            delay={1000}
             src='/static/images/stories/cresta.jpg'
             heading="Perfect Symmetry!"
             text='The scene was perfect, the bridal party, even more so.'
