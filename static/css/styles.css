@@ -56,7 +56,8 @@
 }
 
 .packages__shadow {
-    box-shadow: 2px 5px 25px var(--tertiary);
+    box-shadow: 0px 2px 5px var(--tertiary),
+                0px 5px 25px var(--secondary);
     padding: 20px;
     margin: 25px;
     width: 400px ;
@@ -64,6 +65,29 @@
     background-color: white;
     text-align: center;
     transition: transform .5s ease-out ;
+}
+
+.packages__shadow li {
+    list-style-type: none;
+    margin-bottom: .75rem;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.packages__shadow .card-title> i {
+    opacity: 0.7;
+}
+
+.packages__shadow h5> i, .packages__shadow h5 {
+    opacity: 0.7;
+}
+
+.packages__shadow h5 {
+    text-align: left;
+}
+
+.packages__shadow ul i {
+    opacity: 0.5;
 }
 
 @media(max-width: 450px){
@@ -419,7 +443,6 @@
 .shutter-animation {
     animation: 5s shutter infinite;
     animation-fill-mode: forwards;
-    background-color: red;
     overflow: hidden;
 }
 

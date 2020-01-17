@@ -127,6 +127,42 @@ const photos = [
         thumbnailWidth: 320,
         thumbnailHeight: 320
     },
+    {
+        src: "/static/images/vet.jpg",
+        thumbnail: "/static/images/thumbs/vet.jpg",
+        thumbnailWidth: 200,
+        thumbnailHeight: 300
+    },
+    {
+        src: "/static/images/hiv.jpg",
+        thumbnail: "/static/images/thumbs/hiv.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 213
+    },
+    {
+        src: "/static/images/jack.jpg",
+        thumbnail: "/static/images/thumbs/jack.jpg",
+        thumbnailWidth: 213,
+        thumbnailHeight: 300
+    },
+    {
+        src: "/static/images/peter.jpg",
+        thumbnail: "/static/images/thumbs/peter.jpg",
+        thumbnailWidth: 300,
+        thumbnailHeight: 300
+    },
+    {
+        src: "/static/images/old.jpg",
+        thumbnail: "/static/images/thumbs/old.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 213
+    },
+    {
+        src: "/static/images/banner.jpg",
+        thumbnail: "/static/images/thumbs/banner.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 213
+    },
 ]
 
 const Gallary =(props) =>{
