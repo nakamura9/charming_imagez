@@ -61,18 +61,7 @@ const photos = [
         thumbnailWidth: 240,
         thumbnailHeight: 360
     },
-    {
-        src: "/static/images/family-half.jpg",
-        thumbnail: "/static/images/thumbs/family-half.jpg",
-        thumbnailWidth: 240,
-        thumbnailHeight: 300
-    },
-    {
-        src: "/static/images/family-kids.jpg",
-        thumbnail: "/static/images/thumbs/family-kids.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 213
-    },
+
     {
         src: "/static/images/family-left.jpg",
         thumbnail: "/static/images/thumbs/family-left.jpg",

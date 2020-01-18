@@ -41,15 +41,15 @@ return(
         />
         <RevealCard 
             delay={500}
-            src='/static/images/stories/beach.jpg'
-            heading='Wherever you are'
-            text='We can execute your creative vision'
+            src='/static/images/stories/pre_shoot.jpeg'
+            heading='Pre-Wedding Photoshoots'
+            text='Your statement of intent!'
         />
         <RevealCard 
             delay={1000}
             src='/static/images/stories/cresta.jpg'
             heading="Perfect Symmetry!"
-            text='The scene was perfect, the bridal party, even more so.'
+            text='The Perfect Picture Composition-Elements arranged with perfect care and passion!!!'
         />
         
     </div>

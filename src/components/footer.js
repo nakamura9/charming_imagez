@@ -17,7 +17,9 @@ const Footer = (props) =>{
                 <a className='footer__link' href='https://facebook.com/CharmingImagez
                 '><i className="fab fa-facebook fa-2x" ></i> Facebook</a>
                 <a className='footer__link' href=' https://www.instagram.com/charming_imagez'><i className="fab fa-instagram fa-2x" ></i> Instagram</a>
+                <a className='footer__link' href='https://wa.me/263772803457'><i className="fab fa-whatsapp fa-2x" ></i> WhatsApp</a>
                 <a className='footer__link' href='mailto:geraldczw@gmail.com'><i className="fas fa-envelope fa-2x" ></i> Email</a>
+
             </div>
         </footer>)
 }

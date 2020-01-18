@@ -680,3 +680,18 @@
         height: 50px;
     }
 }
+
+.card-text {
+    text-align: left;
+}
+
+.icon-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.icon-header i {
+    display: inline-block;
+}
+
