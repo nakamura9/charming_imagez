@@ -2,7 +2,8 @@ import React, {useEffect} from 'react'
 
 const revealCard =(props) => {
     return(
-        <div className="reveal-card">
+        <div className="reveal-card" data-aos="fade-up" 
+             data-aos-delay={props.delay}>
             <div className="reveal-image"
                 style={{backgroundImage: 'url(' + props.src+ ')'}}
                ></div>

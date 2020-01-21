@@ -1,0 +1,18 @@
+.footer {
+    background-color: #1e2022;
+    color: #f0f5f9;
+    padding:10px;
+    margin-top:10px;
+    font-size:1rem;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+}
+
+.footer > div {
+    flex: 1;
+    min-width: 300px;
+    margin: 2rem;
+}

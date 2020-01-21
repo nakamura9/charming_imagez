@@ -34,11 +34,8 @@ const Blog =(props) =>{
             }
             if(currentTag != null){
                 posts = posts.filter(post =>{
-                    console.log('iterating tags')
                     let tag;
                     for(tag of post.fields.tags){
-                        console.log(currentTag)
-                        console.log(tag)
                         if(currentTag.fields.name == tag.fields.name){
                             return true
                         }
