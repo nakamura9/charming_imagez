@@ -33,6 +33,9 @@ const AppNav = (props) =>{
                 </LinkContainer>
                 <LinkContainer to='/packages'>
                     <Nav.Link >Packages</Nav.Link></LinkContainer>
+                <LinkContainer to='/contact'>
+                    <Nav.Link >Contact Us</Nav.Link>
+                </LinkContainer>
                 <LinkContainer to='/blog'>
                     <Nav.Link >Blog</Nav.Link>
                 </LinkContainer>
