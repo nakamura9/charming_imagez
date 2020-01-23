@@ -42,14 +42,14 @@ return(
         <RevealCard 
             delay={500}
             src='/static/images/stories/pre_shoot.jpeg'
-            heading='Pre-Wedding Photoshoots'
+            heading='Pre-Wedding Photo-shoots'
             text='Your statement of intent!'
         />
         <RevealCard 
             delay={1000}
             src='/static/images/stories/cresta.jpg'
-            heading="Perfect Symmetry!"
-            text='The Perfect Picture Composition-Elements arranged with perfect care and passion!!!'
+            heading="The Perfect Picture Composition"
+            text='Elements arranged with perfect care and passion!!!'
         />
         
     </div>

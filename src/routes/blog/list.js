@@ -17,11 +17,9 @@ const Blog =(props) =>{
     const [authors, setAuthors] = React.useState([])
     
     React.useEffect(()=>{
-        console.log('changing')
         client.getEntries({
             content_type: 'blogPost'
         }).then(res =>{
-            console.log(res)
             let posts = res.items
             if(currentAuthor == null && currentTag == null){
                 setPosts(posts)
@@ -78,6 +76,28 @@ const Blog =(props) =>{
                 <button className='btn blog__b'
                     onClick={()=>{setCurrentAuthor(null);setCurrentTag(null)}}> <i class="fas fa-filter    "></i> Clear Filters</button></p>
         <div className="container-fluid div row">
+        <div className="col-md-4 sm-12">
+                <div className='blog__aside'>
+                    <h4 className='blog__heading'>Authors</h4>
+                    {authors.map(author =>(<div className="blog__author-card"
+                                             onClick={()=>{setCurrentAuthor(author);setCurrentTag(null)}}>
+                        <div className='blog__author-card--icon'
+                            style={{backgroundImage: `url(${author.fields.thumbnail.fields.file.url})`}}></div>
+                        <div className='blog__author-card--name'>
+                            <h5>{author.fields.fullName}</h5>
+                        </div>
+                    </div>))}
+                </div>
+                <div className="blog__aside">
+                    <h4 className='blog__heading'>Tags</h4>
+                    {tags.map(tag =>(
+                        <div className='blog__tag'
+                            onClick={()=>{setCurrentTag(tag);setCurrentAuthor(null)}}>
+                            #{tag.fields.name}
+                        </div>))}
+                </div>
+            </div>
+
             <div className="col-md-8 sm-12">
                 <h3 className='blog__heading'>Posts</h3>
                 {posts.map(post =>(
@@ -100,28 +120,6 @@ const Blog =(props) =>{
                 ))}
 
             </div>
-            <div className="col-md-4 sm-12">
-                <div className='blog__aside'>
-                    <h4 className='blog__heading'>Authors</h4>
-                    {authors.map(author =>(<div className="blog__author-card"
-                                             onClick={()=>{setCurrentAuthor(author);setCurrentTag(null)}}>
-                        <div className='blog__author-card--icon'
-                            style={{backgroundImage: `url(${author.fields.thumbnail.fields.file.url})`}}></div>
-                        <div className='blog__author-card--name'>
-                            <h5>{author.fields.fullName}</h5>
-                        </div>
-                    </div>))}
-                </div>
-                <div className="blog__aside">
-                    <h4 className='blog__heading'>Tags</h4>
-                    {tags.map(tag =>(
-                        <div className='blog__tag'
-                            onClick={()=>{setCurrentTag(tag);setCurrentAuthor(null)}}>
-                            #{tag.fields.name}
-                        </div>))}
-                </div>
-            </div>
-
         </div>
         </React.Fragment>
     )

@@ -13,21 +13,25 @@ const ContactPage = (props) =>{
         
     }}>Contact Us</h1>
             <div style={{margin: "0px auto", width: "50%", padding: '36px', borderRadius: "8px", boxShadow: "inset 0px 0px 10px #bbb", backgroundColor: 'white' }}> 
-                <form method="POST" name='contact' data-netlify="true">
+                <form method="POST" action="https://formspree.io/xjvydwrg">
                     <label htmlFor="">
                         Name: 
                     </label>
-                    <input className='form-control' type="text"/>
+                    <input className='form-control' type="text" name='name'/>
                     <label htmlFor="">
                         Email Address: 
                     </label>
-                    <input className='form-control' type="text"/>
+                    <input className='form-control' type="text" name='email'/>
                     <label htmlFor="">
                         Subject: 
                     </label>
-                    <input className='form-control' type="text"/>
+                    {/* <label htmlFor="">
+                        Second Name:
+                        <input type='text' id='second-name'/> 
+                    </label> */}
+                    <input className='form-control' type="text" name='subject'/>
                     <label htmlFor="">Message:</label>
-                    <textarea className='form-control' name="" id="" cols="30" rows="10"></textarea>
+                    <textarea className='form-control' name="subject" cols="30" rows="10"></textarea>
                     <button className="btn quarternary text-white " style={{marginTop: "5px"}}>Send</button>
                 </form>
             </div>

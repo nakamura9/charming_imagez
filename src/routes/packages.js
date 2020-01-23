@@ -36,8 +36,9 @@ return(
                         <ul>
                             <li><i className="fa fa-camera" aria-hidden="true"></i> 2 Photographers (Bride and Groom)</li>
                             <li> <i className="fas fa-sd-card"></i> 500 Photos on flash disk</li>
-                            <li> <i class="fa fa-book" aria-hidden="true"></i> A4 Photo book</li>
-                            <li> <i className="fas fa-portrait    "></i> 3 * A3 canvases</li>
+                            <li> <i className="fas fa-images    "></i> 100 prints post card size</li>
+                            <li> <i class="fa fa-portrait" aria-hidden="true"></i>3 * A4 Canvas prints</li>
+
                             <li> <i className="fas fa-tshirt    "></i>Pre-wedding shoot with complementary T-shirts</li>
                         </ul>
                         <h5> <i className="fas fa-film   "></i> Videography</h5>

@@ -1,6 +1,6 @@
 import React, {lazy, Suspense} from 'react'
 import ReactDOM from 'react-dom'
-import {HashRouter as Router, Switch, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import AppNav from './components/nav'
 import Footer from './components/footer'
 import Home from './routes/home'
