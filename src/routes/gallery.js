@@ -1,29 +1,17 @@
 import React from 'react'
 import PhotoGallery from 'react-grid-gallery'
+
 const photos = [
     {
         thumbnail: "/static/images/thumbs/arch.jpg",
         src: "/static/images/arch.jpg",
         thumbnailWidth: 320,
         thumbnailHeight: 213
-    },
-    {
-        src: "/static/images/baby.jpg",
-        thumbnail: "/static/images/thumbs/baby.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 320
-    },
-    {
+    },{
         src: "/static/images/baker.jpg",
         thumbnail: "/static/images/thumbs/baker.jpg",
         thumbnailWidth: 320,
         thumbnailHeight: 213
-    },
-    {
-        src: "/static/images/beach.jpg",
-        thumbnail: "/static/images/thumbs/beach.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 214
     },
     {
         src: "/static/images/benz.jpg",
@@ -46,6 +34,49 @@ const photos = [
     {
         src: "/static/images/cresta-2.jpg",
         thumbnail: "/static/images/thumbs/cresta-2.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 214
+    },
+    {
+        src: "/static/images/in-car.jpg",
+        thumbnail: "/static/images/thumbs/in-car.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 213
+    },
+    {
+        src: "/static/images/rings.jpg",
+        thumbnail: "/static/images/thumbs/rings.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 214
+    },
+    {
+        src: "/static/images/golf.jpeg",
+        thumbnail: "/static/images/thumbs/golf.jpeg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 213
+    },
+    {
+        src: "/static/images/golf-propose.jpg",
+        thumbnail: "/static/images/thumbs/golf-propose.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 213
+    },
+    {
+        src: "/static/images/pre-shoot.jpeg",
+        thumbnail: "/static/images/thumbs/pre-shoot.jpeg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 213
+    },
+
+    {
+        src: "/static/images/baby.jpg",
+        thumbnail: "/static/images/thumbs/baby.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 320
+    },
+    {
+        src: "/static/images/beach.jpg",
+        thumbnail: "/static/images/thumbs/beach.jpg",
         thumbnailWidth: 320,
         thumbnailHeight: 214
     },
@@ -75,28 +106,16 @@ const photos = [
         thumbnailHeight: 213
     },
     {
-        src: "/static/images/friend.jpg",
-        thumbnail: "/static/images/thumbs/friend.jpg",
-        thumbnailWidth: 240,
-        thumbnailHeight: 300
-    },
-    {
         src: "/static/images/girls.jpg",
         thumbnail: "/static/images/thumbs/girl-toys.jpg",
         thumbnailWidth: 320,
         thumbnailHeight: 213
     },
     {
-        src: "/static/images/graduation.jpg",
-        thumbnail: "/static/images/thumbs/graduation.jpg",
+        src: "/static/images/friend.jpg",
+        thumbnail: "/static/images/thumbs/friend.jpg",
         thumbnailWidth: 240,
-        thumbnailHeight: 336
-    },
-    {
-        src: "/static/images/in-car.jpg",
-        thumbnail: "/static/images/thumbs/in-car.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 213
+        thumbnailHeight: 300
     },
     {
         src: "/static/images/infant.jpg",
@@ -105,16 +124,17 @@ const photos = [
         thumbnailHeight: 360
     },
     {
-        src: "/static/images/rings.jpg",
-        thumbnail: "/static/images/thumbs/rings.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 214
-    },
-    {
         src: "/static/images/toys.jpg",
         thumbnail: "/static/images/thumbs/toys.jpg",
         thumbnailWidth: 320,
         thumbnailHeight: 320
+    },
+
+    {
+        src: "/static/images/graduation.jpg",
+        thumbnail: "/static/images/thumbs/graduation.jpg",
+        thumbnailWidth: 240,
+        thumbnailHeight: 336
     },
     {
         src: "/static/images/vet.jpg",
@@ -154,11 +174,13 @@ const photos = [
     },
 ]
 
+
+
 const Gallary =(props) =>{
     return(
         <React.Fragment>
             
-        <div className="container-fluid">
+        <div className="container">
             <div className="row">
                 <div className="col-12">
                     <h1 style={{fontFamily: 'AlexBrush', fontWeight: 500, fontSize: '5rem', textAlign: 'center'}}>Photo Gallery</h1>

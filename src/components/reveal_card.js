@@ -1,9 +1,10 @@
 import React, {useEffect} from 'react'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 const revealCard =(props) => {
     return(
-        <div className="reveal-card" data-aos="fade-up" 
-             data-aos-delay={props.delay}>
+        <ScrollAnimation animateIn='bounceInDown' delay={props.delay}>
+            <div className="reveal-card">
             <div className="reveal-image"
                 style={{backgroundImage: 'url(' + props.src+ ')'}}
                ></div>
@@ -16,7 +17,9 @@ const revealCard =(props) => {
                 </div>
             </div>
         </div>
-    )
+
+        </ScrollAnimation>
+        )
 }
 
 export default revealCard

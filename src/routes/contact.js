@@ -12,7 +12,7 @@ const ContactPage = (props) =>{
         textAlign: 'center'
         
     }}>Contact Us</h1>
-            <div style={{margin: "0px auto", width: "50%", padding: '36px', borderRadius: "8px", boxShadow: "inset 0px 0px 10px #bbb", backgroundColor: 'white' }}> 
+            <div classname='contact-form'> 
                 <form method="POST" action="https://formspree.io/xjvydwrg">
                     <label htmlFor="">
                         Name: 

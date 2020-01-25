@@ -294,7 +294,7 @@
     z-index: 10;
     position: absolute;
     left: 100px;
-    bottom: 0px
+    bottom: -50px
 }
 
 
@@ -672,6 +672,10 @@
     .custom-nav{
         min-height: 100px;
     }
+
+    .contact-form {
+        width: 90% important!;
+    }
 }
 
 @media(max-width: 400px){
@@ -698,4 +702,13 @@
 footer img {
     height: 30px;
     width: auto;
+}
+
+.contact-form {
+    margin: 0px auto; 
+    width: 50%; 
+    padding: 36px; 
+    border-radius: 8px; 
+    box-shadow: inset 0px 0px 10px #bbb; 
+    background-color: white;
 }

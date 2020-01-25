@@ -2,6 +2,8 @@ import React from 'react';
 import CardDeck from 'react-bootstrap/CardDeck'
 import Card from 'react-bootstrap/Card'
 import {ul} from 'react-bootstrap'
+import ScrollAnimation from 'react-animate-on-scroll'
+
 const Packages =(props) =>{
 return(
 
@@ -150,7 +152,7 @@ return(
                 </Card>
                 <Card className='packages__shadow'>
                     <Card.Body>
-                        <Card.Title> <i className="fas fa-video fa-2x   "></i> Drone Footage</Card.Title>
+                        <Card.Title> <img src="static/images/drone.png" style={{height: "40px"}} alt=""/> Drone Footage</Card.Title>
                         <Card.Text>Experience your most precious moments from a whole new persepective. Professionally
                             shot and pilotted drone footage.</Card.Text>
                     </Card.Body>

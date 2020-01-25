@@ -2,14 +2,15 @@ import React from 'react'
 
 
 class Carousel extends React.Component{
-    state = {
-        current: 0
+    constructor(props){
+        super(props);
+        this.animatable = React.createRef()
+
+        this.state = {
+            current:0
+        }
     }
 
-    constructor(props){
-        super(props)
-        this.animatable = React.createRef()
-    }
 
     //takes images as a list of children
     componentDidMount() {
