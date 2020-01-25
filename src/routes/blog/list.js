@@ -17,11 +17,9 @@ const Blog =(props) =>{
     const [authors, setAuthors] = React.useState([])
     
     React.useEffect(()=>{
-        console.log('changing')
         client.getEntries({
             content_type: 'blogPost'
         }).then(res =>{
-            console.log(res)
             let posts = res.items
             if(currentAuthor == null && currentTag == null){
                 setPosts(posts)
@@ -78,29 +76,7 @@ const Blog =(props) =>{
                 <button className='btn blog__b'
                     onClick={()=>{setCurrentAuthor(null);setCurrentTag(null)}}> <i class="fas fa-filter    "></i> Clear Filters</button></p>
         <div className="container-fluid div row">
-            <div className="col-md-8 sm-12">
-                <h3 className='blog__heading'>Posts</h3>
-                {posts.map(post =>(
-                        <Link to={`/post/${post.sys.id}`} style={{textDecoration: 'none', color: '#6a2c70'}}>
-                           <div className="blog__post-card">
-                        <div style={{flex: 1}}>
-                            <img src={post.fields.headingImage.fields.file.url}/>
-                        </div>
-                        <div style={{flex: 3}}>
-                            <h4>{post.fields.title}</h4>
-                            <p>Date: {post.fields.published}</p>
-                            <h6>{post.fields.author.fields.fullName}</h6>
-                            <div style={{padding: '0.5rem'}}>
-                                {post.fields.tags.map(tag => (<span className="blog__tag"># {tag.fields.name}</span>))}
-                            </div>
-                        </div>
-
-                    </div>
-                    </Link>
-                ))}
-
-            </div>
-            <div className="col-md-4 sm-12">
+        <div className="col-md-4 sm-12">
                 <div className='blog__aside'>
                     <h4 className='blog__heading'>Authors</h4>
                     {authors.map(author =>(<div className="blog__author-card"
@@ -122,6 +98,28 @@ const Blog =(props) =>{
                 </div>
             </div>
 
+            <div className="col-md-8 sm-12">
+                <h3 className='blog__heading'>Posts</h3>
+                {posts.map(post =>(
+                        <Link to={`/post/${post.sys.id}`} style={{textDecoration: 'none', color: '#6a2c70'}}>
+                           <div className="blog__post-card">
+                        <div style={{flex: 1}}>
+                            <img alt='charming-imagez blog image' src={post.fields.headingImage.fields.file.url}/>
+                        </div>
+                        <div style={{flex: 3}}>
+                            <h4>{post.fields.title}</h4>
+                            <p>Date: {post.fields.published}</p>
+                            <h6>{post.fields.author.fields.fullName}</h6>
+                            <div style={{padding: '0.5rem'}}>
+                                {post.fields.tags.map(tag => (<span className="blog__tag"># {tag.fields.name}</span>))}
+                            </div>
+                        </div>
+
+                    </div>
+                    </Link>
+                ))}
+
+            </div>
         </div>
         </React.Fragment>
     )

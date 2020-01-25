@@ -16,7 +16,7 @@ const AppNav = (props) =>{
         <Navbar expand='lg' className={'quarternary navbar-dark custom-nav'} >
             <Navbar.Brand >
                 <Link to='/'>
-                    <img width='200' height='40' src='/static/images/transparent.PNG' style={{filter:'invert(100%)'}}/>
+                    <img width='200' alt='charming-imagez logo' height='40' src='/static/images/transparent.PNG' style={{filter:'invert(100%)'}}/>
                 </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -33,6 +33,9 @@ const AppNav = (props) =>{
                 </LinkContainer>
                 <LinkContainer to='/packages'>
                     <Nav.Link >Packages</Nav.Link></LinkContainer>
+                <LinkContainer to='/contact'>
+                    <Nav.Link >Contact Us</Nav.Link>
+                </LinkContainer>
                 <LinkContainer to='/blog'>
                     <Nav.Link >Blog</Nav.Link>
                 </LinkContainer>

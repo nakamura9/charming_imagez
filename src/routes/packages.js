@@ -1,7 +1,9 @@
 import React from 'react';
 import CardDeck from 'react-bootstrap/CardDeck'
 import Card from 'react-bootstrap/Card'
-import {ListGroup} from 'react-bootstrap'
+import {ul} from 'react-bootstrap'
+import ScrollAnimation from 'react-animate-on-scroll'
+
 const Packages =(props) =>{
 return(
 
@@ -15,61 +17,61 @@ return(
 
                     <Card.Body>
 
-                        <Card.Title>The Basics</Card.Title>
-                        <ListGroup>
-                            <ListGroup.Item>Bridal Preparations To Ceremony(1 Photographer)</ListGroup.Item>
-                            <ListGroup.Item>300 Photos on flash disk</ListGroup.Item>
-                            <ListGroup.Item>60 prints, postcard size</ListGroup.Item>
-                        </ListGroup>
-                        <h5>Videography</h5>
-                        <ListGroup>
-                            <ListGroup.Item>1 HD Video Camera</ListGroup.Item>
-                            <ListGroup.Item>1 Flash Disk HD video</ListGroup.Item>
-                        </ListGroup>
+                        <Card.Title><i className="fas fa-award  fa-2x  "></i> The Basics</Card.Title>
+                        <ul>
+                            <li> <i className="fa fa-camera" aria-hidden="true"></i> 1 Photographer (Bridal Preparations To
+                                Ceremony)</li>
+                            <li> <i className="fas fa-sd-card"></i> 300 Photos on flash disk</li>
+                            <li> <i className="fas fa-file-image    "></i> 60 prints, postcard size</li>
+                        </ul>
+                        <h5><i className="fas fa-film  "></i> Videography</h5>
+                        <ul>
+                            <li> <i className="fas fa-video    "></i> 2 HD Video Cameras</li>
+                            <li> <i className="fas fa-file-video    "></i> 1 Flash Disk HD video</li>
+                        </ul>
                     </Card.Body>
                 </Card>
                 <Card className='packages__shadow'>
 
                     <Card.Body>
-                        <Card.Title>Gold Tier</Card.Title>
-                        <ListGroup>
-                            <ListGroup.Item>Bride and Groom(2 Photographers)</ListGroup.Item>
-                            <ListGroup.Item>500 Photos on flash disk</ListGroup.Item>
-                            <ListGroup.Item>100 prints, postcard size</ListGroup.Item>
-                            <ListGroup.Item>2 A4 canvases</ListGroup.Item>
-                            <ListGroup.Item>1 A3 canvases</ListGroup.Item>
-                            <ListGroup.Item>Pre-wedding shoot with complementary T-shirts</ListGroup.Item>
-                        </ListGroup>
-                        <h5>Videography</h5>
-                        <ListGroup>
+                        <Card.Title> <i className="fas fa-medal  fa-2x  "></i> Gold Tier</Card.Title>
+                        <ul>
+                            <li><i className="fa fa-camera" aria-hidden="true"></i> 2 Photographers (Bride and Groom)</li>
+                            <li> <i className="fas fa-sd-card"></i> 500 Photos on flash disk</li>
+                            <li> <i className="fas fa-images    "></i> 100 prints post card size</li>
+                            <li> <i class="fa fa-portrait" aria-hidden="true"></i>3 * A4 Canvas prints</li>
 
-                            <ListGroup.Item>2 HD Video Cameras</ListGroup.Item>
-                            <ListGroup.Item>1 Flash Disk HD video</ListGroup.Item>
+                            <li> <i className="fas fa-tshirt    "></i>Pre-wedding shoot with complementary T-shirts</li>
+                        </ul>
+                        <h5> <i className="fas fa-film   "></i> Videography</h5>
+                        <ul>
+
+                            <li> <i className="fas fa-video    "></i> 2 HD Video Cameras</li>
+                            <li> <i className="fas fa-file-video    "></i> 1 Flash Disk HD video</li>
 
 
-                        </ListGroup>
+                        </ul>
                     </Card.Body>
                 </Card>
                 <Card className='packages__shadow'>
 
                     <Card.Body>
-                        <Card.Title>Platinum Tier</Card.Title>
-                        <ListGroup>
-                            <ListGroup.Item>Bride And Groom(2 Photographers)</ListGroup.Item>
-                            <ListGroup.Item>500 Photos on flash disk</ListGroup.Item>
-                            <ListGroup.Item>100 prints, postcard size</ListGroup.Item>
-                            <ListGroup.Item>2 A4 canvases</ListGroup.Item>
-                            <ListGroup.Item>1 A3 canvases</ListGroup.Item>
-                            <ListGroup.Item>Pre-wedding shoot with complementary T-shirts</ListGroup.Item>
+                        <Card.Title> <i className="fa fa-trophy fa-2x" aria-hidden="true"></i> Platinum Tier</Card.Title>
+                        <ul>
+                            <li><i className="fa fa-camera" aria-hidden="true"></i> 2 Photographers(Bride And Groom)</li>
+                            <li> <i className="fas fa-sd-card"></i>500 Photos on flash disk</li>
+                            <li> <i class="fa fa-book" aria-hidden="true"></i> A4 Photo book</li>
+                            <li> <i className="fas fa-portrait    "></i> 3 * A3 canvases</li>
+                            <li> <i className="fas fa-tshirt    "></i> Pre-wedding shoot with complementary T-shirts</li>
 
 
-                        </ListGroup>
-                        <h5>Videography</h5>
-                        <ListGroup>
-                            <ListGroup.Item>2 HD Video Cameras</ListGroup.Item>
-                            <ListGroup.Item>1 Flash Disk HD video</ListGroup.Item>
-                            <ListGroup.Item>Drone Footage</ListGroup.Item>
-                        </ListGroup>
+                        </ul>
+                        <h5> <i className="fas fa-film   "></i> Videography</h5>
+                        <ul>
+                            <li> <i className="fas fa-video    "></i> 2 HD Video Cameras</li>
+                            <li> <i className="fas fa-file-video    "></i> 1 Flash Disk HD video</li>
+                            <li>Drone Footage</li>
+                        </ul>
                     </Card.Body>
                 </Card>
             </div>
@@ -78,13 +80,38 @@ return(
     <div className="row">
         <div className="col-12">
             <h1 style={{marginBottom: '1rem', marginTop: '1rem',fontFamily: 'AlexBrush',  fontSize: '5rem'}}>Corporate
-                Events Photography</h1>
-            <div class="row">
-                <div class="col-12">
-                    <h1 style={{marginBottom: '1rem', marginTop: '1rem',fontFamily: 'AlexBrush',  fontSize: '5rem'}}>
-                        Family Photography</h1>
+                Events and Family Photography</h1>
+            <div className="packages__deck" >
+                <Card className='packages__shadow' >
+                    <Card.Body>
+                        <Card.Title className='icon-header'>
+                            <i class="fas fa-user-tie fa-2x   "></i>
+                            <i class="fa fa-briefcase fa-2x" aria-hidden="true"></i>
+                            <i class="fas fa-certificate  fa-2x  "></i>
+                        </Card.Title>
+                        <Card.Title>Corporate Events Photography</Card.Title>
+                        <Card.Text>Be it that product photo shoot, that well planned and well thought-out end of year function, that official opening or that annual event that is the highlight of your organisation's calendar, we are geared to be your solutions provider! 
+                        </Card.Text>
+                        <Card.Text>We will meet and exceed your media coverage needs.
+                            !</Card.Text>
+                        <Card.Text>Contact us today and let us work on your script!</Card.Text>
+                    </Card.Body>
+                </Card>
+                <Card className='packages__shadow' >
+                    <Card.Body>
+                    <Card.Title className='icon-header'>
+                            <i class="fas fa-home fa-2x   "></i>
+                            <i class="fa fa-baby fa-2x" aria-hidden="true"></i>
+                            <i class="fas fa-glasses  fa-2x  "></i>
+                        </Card.Title>
+                        <Card.Title> Family Photography</Card.Title>
+                        <Card.Text>Because we believe in the family unit, what better way to promote family bonds than with a Charming Family Photoshoot?
+                        </Card.Text>
+                                <Card.Text>We have the experience and passion for dealing with toddlers, teenagers, adults as well as the elderly.</Card.Text>
+                                <Card.Text>Our promise to you is Family Photography With a Touch of Charm!!!</Card.Text>
 
-                </div>
+                    </Card.Body>
+                </Card>
             </div>
         </div>
     </div>
@@ -92,36 +119,40 @@ return(
         <div className="col-12">
             <h1 style={{marginBottom: '1rem', marginTop: '1rem',fontFamily: 'AlexBrush',  fontSize: '5rem'}}>Add-Ons
             </h1>
-            <p>Depending on the package selected, some features may be omitted. To customize your experience, you may
+            <p style={{fontSize: '1.5rem'}}>Depending on the package selected, some features may be omitted. To customize your experience, you may
                 request the following add-ons.</p>
             <div className='packages__deck'>
                 <Card className='packages__shadow'>
                     <Card.Body>
-                        <Card.Title>Photo Books</Card.Title>
+                        <Card.Title> <i className="fas fa-images fa-2x    "></i> Photo Books</Card.Title>
                         <Card.Text>Photo books are glossy hardcover books that display your precious moment in a perfect
                             medium for sharing with friends and family.</Card.Text>
-                        <h5>Available Configurations:</h5>
-                        <ListGroup>
-                            <ListGroup.Item>A4 Photobook</ListGroup.Item>
-                        </ListGroup>
+                        <h5>Configurations:</h5>
+                        <ul>
+                            <li> <i className="fa fa-check-square" aria-hidden="true"></i> A4 Photobook</li>
+                            <li> <i className="fa fa-check-square" aria-hidden="true"></i> A3 Photobook</li>
+                            <li> <i className="fa fa-check-square" aria-hidden="true"></i> Square Photobook</li>
+                        </ul>
                     </Card.Body>
                 </Card>
                 <Card className='packages__shadow'>
                     <Card.Body>
-                        <Card.Title>Canvas Portraits</Card.Title>
+                        <Card.Title> <i className="fas fa-portrait  fa-2x  "></i> Canvas Portraits</Card.Title>
                         <Card.Text>Canvas Portraits utilize the textured surface of canvas to elevate your pictures to a
                             higher artform. Frame them and hang them on your walls to celebrate your finest moments!
                         </Card.Text>
                         <h5>Configurations:</h5>
-                        <ListGroup>
-                            <ListGroup.Item>A4 Canvas</ListGroup.Item>
-                            <ListGroup.Item>A3 Canvas</ListGroup.Item>
-                        </ListGroup>
+                        <ul>
+                            <li> <i className="fa fa-check-square" aria-hidden="true"></i> A4 Canvas</li>
+                            <li> <i className="fa fa-check-square" aria-hidden="true"></i> A3 Canvas</li>
+                            <li> <i className="fa fa-check-square" aria-hidden="true"></i> A2 Canvas</li>
+                            <li> <i className="fa fa-check-square" aria-hidden="true"></i> A0 Canvas</li>
+                        </ul>
                     </Card.Body>
                 </Card>
                 <Card className='packages__shadow'>
                     <Card.Body>
-                        <Card.Title>Drone Footage</Card.Title>
+                        <Card.Title> <img src="static/images/drone.png" style={{height: "40px"}} alt="charming imagez drone footage"/> Drone Footage</Card.Title>
                         <Card.Text>Experience your most precious moments from a whole new persepective. Professionally
                             shot and pilotted drone footage.</Card.Text>
                     </Card.Body>
