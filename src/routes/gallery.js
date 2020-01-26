@@ -1,6 +1,6 @@
 import React from 'react'
 import PhotoGallery from 'react-grid-gallery'
-
+import {Helmet} from 'react-helmet'
 const photos = [
     {
         thumbnail: "/static/images/thumbs/arch.jpg",
@@ -179,6 +179,10 @@ const photos = [
 const Gallary =(props) =>{
     return(
         <React.Fragment>
+        <Helmet>
+        <title>Charming Imagez Gallery</title>
+        <meta name="description" content="Sample some of the beautiful photoshoots for weddings, proposals family shoots, and corporate events." />
+    </Helmet>
             
         <div className="container">
             <div className="row">

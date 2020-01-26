@@ -1,4 +1,5 @@
 import React from 'react';
+import {Helmet} from 'react-helmet'
 
 const About =(props) =>{
     const [visible, setVisible] = React.useState(false)
@@ -8,6 +9,10 @@ const About =(props) =>{
 
     return(
         <div className="about__container">
+            <Helmet>
+                <title>Charming Imagez | About</title>
+                <meta name="description" content="What is charming imagez? And what do we represent? Learn about The people behind charming-imagez" />
+            </Helmet>
             <div className='container-fluid'>
             <div className="row">
                 <div className="col-md-12 col-lg-3">

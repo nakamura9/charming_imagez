@@ -3,10 +3,15 @@ import Shutter from '../components/carousel'
 import Carousel from 'react-bootstrap/carousel'
 import TestimonialCard from '../components/testimonials'
 import RevealCard from '../components/reveal_card'
+import {Helmet} from 'react-helmet'
 
 const Home =(props) =>{
 return(
 <React.Fragment>
+    <Helmet>
+        <title>Charming Imagez Wedding and Corporate Photography</title>
+        <meta name="description" content="Charming Imagez is a dynamic photography studio located in Zimbabwe specializing in wedding family and corporate event photography" />
+    </Helmet>
     
     <Shutter 
         images={[

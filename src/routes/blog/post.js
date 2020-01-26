@@ -1,6 +1,8 @@
 import React from 'react';
 import {createClient} from 'contentful'
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer'
+import {Helmet} from 'react-helmet'
+import {FacebookProvider, Like} from 'react-facebook'
 
 const client = createClient({
     space: "wnyml39s2hab",
@@ -15,12 +17,16 @@ const Post =(props) =>{
             setPost(res)
         })
     }, [])
-
     return(
         <div className="container">
+            
             <div className="row">
                 <div className="col-12 blog__post">
                     {post != null ? <React.Fragment>
+                        <Helmet>
+                            <title>Charming Imagez | Blog Post</title>
+                            <meta name="description" content={post.fields.title} />
+                        </Helmet>
                         <h1>{post.fields.title}</h1>
                         <p><i> Published: {new Date(post.fields.published).toDateString()}</i></p>
                         <img src={`${post.fields.headingImage.fields.file.url}`} alt="Blog Post Title"/>
@@ -31,6 +37,10 @@ const Post =(props) =>{
                         <div className='blog__post-content'>
                         {documentToReactComponents(post.fields.content)}
                         </div>
+                        
+                        <FacebookProvider appId="8974538">
+                            <Like href="https://www.charming-imagez.com/blog/"  colorScheme="dark" showFaces share />
+                        </FacebookProvider>
                         <hr className='my-2' />
                         <p> <u> Tagged under:</u></p>
                         <div>

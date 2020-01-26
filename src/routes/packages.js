@@ -3,11 +3,17 @@ import CardDeck from 'react-bootstrap/CardDeck'
 import Card from 'react-bootstrap/Card'
 import {ul} from 'react-bootstrap'
 import ScrollAnimation from 'react-animate-on-scroll'
+import {Helmet} from 'react-helmet'
 
 const Packages =(props) =>{
 return(
 
+
 <div className="container-fluid">
+    <Helmet>
+        <title>Charming Imagez Packages</title>
+        <meta name="description" content="View the packages offered by charming imagez to make your next photoshoot amazing! Find the package to suit your budget and event." />
+    </Helmet>
     <div className="row">
         <div className="col-12">
             <h1 style={{marginBottom: '1rem', marginTop: '1rem',fontFamily: 'AlexBrush',  fontSize: '5rem'}}>Wedding

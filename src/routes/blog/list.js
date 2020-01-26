@@ -1,6 +1,7 @@
 import React from 'react';
 import {createClient} from 'contentful'
 import {Link} from 'react-router-dom'
+import {Helmet} from 'react-helmet'
 
 const client = createClient({
     space: "wnyml39s2hab",
@@ -60,6 +61,10 @@ const Blog =(props) =>{
 
     return(
         <React.Fragment>
+            <Helmet>
+                <title>Charming Imagez | Blog</title>
+                <meta name="description" content="Follow the adventures and exploits of the Charming Imagez team as they put smiles on the faces of all they meet and share it with you on their blog." />
+            </Helmet>
         <h1  style={{
             'fontFamily': 'AlexBrush', 
             fontSize: '5rem', 

@@ -1,9 +1,14 @@
 import React, {useState} from 'react'
+import {Helmet} from 'react-helmet'
 
 const ContactPage = (props) =>{
     return(
         <section style={{
             backgroundImage: "url(/static/images/email-pattern.png)", backgroundRepeat: 'repeat'}}>
+                <Helmet>
+        <title>Charming Imagez | Contact Us</title>
+        <meta name="description" content="Get in touch with charming imagez for a quote or a booking for your next event." />
+    </Helmet>
             <h1 style={{
         fontFamily: 'AlexBrush', 
         fontSize: '5rem', 
@@ -12,7 +17,7 @@ const ContactPage = (props) =>{
         textAlign: 'center'
         
     }}>Contact Us</h1>
-            <div classname='contact-form'> 
+            <div className='contact-form'> 
                 <form method="POST" action="https://formspree.io/xjvydwrg">
                     <label htmlFor="">
                         Name: 
