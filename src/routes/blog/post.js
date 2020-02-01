@@ -39,7 +39,7 @@ const Post =(props) =>{
                         <div className='blog__post-content'>
                         {documentToReactComponents(post.fields.content)}
                         </div>
-                        {post != null ?
+                        {post != null && post.fields.postImages ?
                             <PhotoGallery 
                                 images={post.fields.postImages.map(img =>({
                                     src: img.fields.file.url,
