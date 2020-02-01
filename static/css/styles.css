@@ -375,8 +375,6 @@
     }
 }
 
-
-
 /*Animations */
 .polaroid {
     width: 300px;
@@ -495,6 +493,14 @@
 
 .reveal-card:hover .reveal-text{
     top: 0px;
+}
+
+.reveal-text a {
+    color:white;
+}
+
+.reveal-text .text-content {
+    overflow-y: hidden;
 }
 
 .reveal-card:hover .reveal-image{

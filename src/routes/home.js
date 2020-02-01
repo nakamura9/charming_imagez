@@ -4,8 +4,25 @@ import Carousel from 'react-bootstrap/carousel'
 import TestimonialCard from '../components/testimonials'
 import RevealCard from '../components/reveal_card'
 import {Helmet} from 'react-helmet'
+import {createClient} from 'contentful'
+import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer';
+
+const client = createClient({
+    space: "wnyml39s2hab",
+    accessToken: "rbvcFmf67VobY-atlU3h8Jt6SiZBkpAh1tx_biN51Kk"
+})
 
 const Home =(props) =>{
+    const [posts, setPosts] = React.useState([])
+    React.useEffect(() =>{
+        client.getEntries({
+            content_type: 'blogPost',
+            limit: 3
+        }).then(res =>{
+            setPosts(res.items)
+        })
+    }, [])
+
 return(
 <React.Fragment>
     <Helmet>
@@ -38,24 +55,23 @@ return(
         justifyContent: 'center',
         flexWrap: 'wrap',
     }}>
-        <RevealCard 
-            src='/static/images/stories/family.jpg'
-            heading="Team family!"
-            text="We're all number 1!"
-            delay={0}
-        />
-        <RevealCard 
-            delay={500}
-            src='/static/images/stories/pre_shoot.jpeg'
-            heading='Pre-Wedding Photo-shoots'
-            text='Your statement of intent!'
-        />
-        <RevealCard 
-            delay={1000}
-            src='/static/images/stories/cresta.jpg'
-            heading="The Perfect Picture Composition"
-            text='Elements arranged with perfect care and passion!!!'
-        />
+        {posts.length > 0?
+            posts.map((post, i)=>(
+                <RevealCard 
+                    postId={post.sys.id}
+                    src={post.fields.headingImage.fields.file.url}
+                    heading={post.fields.title}
+                    text={documentToPlainTextString(post.fields.content)}
+                    delay={500 * 1}
+                />
+            ))
+            :
+            <React.Fragment>
+                <p>Loading blog posts...</p>
+                <img src='/static/images/spinner.gif'/>
+            </React.Fragment>
+        }
+        
         
     </div>
     

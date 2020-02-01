@@ -2,6 +2,8 @@ import React from 'react';
 import {createClient} from 'contentful'
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer'
 import {Helmet} from 'react-helmet'
+import PhotoGallery from 'react-grid-gallery'
+
 
 const client = createClient({
     space: "wnyml39s2hab",
@@ -14,6 +16,7 @@ const Post =(props) =>{
     React.useEffect(()=>{
         client.getEntry(props.match.params.id).then(res=>{
             setPost(res)
+            console.log(res)
         })
     }, [])
     return(
@@ -36,8 +39,15 @@ const Post =(props) =>{
                         <div className='blog__post-content'>
                         {documentToReactComponents(post.fields.content)}
                         </div>
-                        
-                        
+                        {post != null ?
+                            <PhotoGallery 
+                                images={post.fields.postImages.map(img =>({
+                                    src: img.fields.file.url,
+                                    thumbnail: img.fields.file.url,
+                                    thumbnailWidth: 320,
+                                    thumbnailHeight: 240
+                                }))}/>
+                            :null}
                         <hr className='my-2' />
                         <p> <u> Tagged under:</u></p>
                         <div>
